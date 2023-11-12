@@ -6,18 +6,20 @@
 
 ## Task 2: Selectors
 #### Subtask 2:
-The purpose of this task is to analyze this [web page](https://scouts-test.futbolkolektyw.pl/en/login?redirected=true) elements to create effective selectors
+The purpose of this task is to analyze this [web page](https://scouts-test.futbolkolektyw.pl/en/login?redirected=true) elements to create effective selectors.
 
 
 **login_field**
 + //*[@id="login"]
 + //*[@name="login"]
 + //*[text()="Login"]
++ //child::div[1]/label
 
 **password_field**
 + //*[@id="password"]
 + //*[@name="password"]
 + //*[text()="Password"]
++ //child::div[2]/label
 
 **remind_password_button**
 + //*[@id="__next"]/form/div/div[1]/a
