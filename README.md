@@ -8,44 +8,44 @@
 #### Subtask 2:
 The purpose of this task is to analyze this [web page](https://scouts-test.futbolkolektyw.pl/en/login?redirected=true) elements to create effective selectors.
 
-**scouts_panel_text**
+**scouts_panel_text_xpath**
 + //h5
 + //*[@id="__next"]/form/div/div[1]/h5
 + //*[text()="Scouts Panel"]
 
-**login_field**
+**login_field_xpath**
 + //*[@id="login"]
 + //*[@name="login"]
 + //*[text()="Login"]
 + //child::div[1]/label
 
-**password_field**
+**password_field_xpath**
 + //*[@id="password"]
 + //*[@name="password"]
 + //*[text()="Password"]
 + //child::div[2]/label
 
-**remind_password_button**
+**remind_password_button_xpath**
 + //*[@id="__next"]/form/div/div[1]/a
 + //*[text()="Remind password"]
 + //child::div/a
 
-**sign_in_button**
+**sign_in_button_xpath**
 + //button
 + //*[@type="submit"]
 + //*[@id="__next"]/form/div/div[2]/button
 
-**drop_down_list**
+**drop_down_list_xpath**
 + //*[@id="__next"]/form/div/div[2]/div/div
 + //*[@role="button"]
 + /html/body/div/form/div/div[2]/div/div
 
-**polish_language_option**
+**polish_language_option_xpath**
 + //*[@id="menu-"]/div[3]/ul/li[1]
 + //li[text()="Polski"]
 + //*[@data-value='pl']
 
-**english_language_option**
+**english_language_option_xpath**
 + //*[@id="menu-"]/div[3]/ul/li[2]
 + //*[@data-value="en"]
 + //li[text()="English"]
