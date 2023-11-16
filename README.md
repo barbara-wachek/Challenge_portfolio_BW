@@ -8,6 +8,10 @@
 #### Subtask 2:
 The purpose of this task is to analyze this [web page](https://scouts-test.futbolkolektyw.pl/en/login?redirected=true) elements to create effective selectors.
 
+**scouts_panel_text**
++ //h5
++ //*[@id="__next"]/form/div/div[1]/h5
++ //*[text()="Scouts Panel"]
 
 **login_field**
 + //*[@id="login"]
