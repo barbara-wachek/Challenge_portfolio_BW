@@ -26,3 +26,5 @@ class LoginPage(BasePage):
     def title_of_page(self):
         assert self.get_page_title(self.login_url) == self.expected_title
 
+    def text_of_header(self):
+        self.assert_element_text(self.driver, "//h5[contains(@class, 'h5')]", "Scouts Panel")
