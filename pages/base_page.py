@@ -31,3 +31,7 @@ class BasePage():
         element_text = element.text
         assert expected_text == element_text
 
+
+    def find_element(self, driver, xpath):
+        element = driver.find_element(by=By.XPATH, value=xpath)
+        assert element is not None

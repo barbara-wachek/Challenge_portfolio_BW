@@ -11,6 +11,10 @@ class AddPlayer(BasePage):
     main_position_field_xpath = "//*[@name='mainPosition']"
     submit_button_xpath = "//*[@type='submit']"
     expected_title = "Add player"
+    submit_alert_xpath = "//div[@role='alert']"
+    expected_alert_message = "Added player."
+    expected_beginning_title_of_edit_page = "Edit player"
+    header_edit_xpath = "//span[contains(text(), 'Edit player')]"
 
     def type_in_name(self, name):
         self.field_send_keys(self.name_field_xpath, name)
@@ -30,6 +34,15 @@ class AddPlayer(BasePage):
     def title_of_page(self):
         time.sleep(5)
         assert self.get_page_title(self.add_player_url) == self.expected_title
+
+    def find_alert_element(self):
+        self.find_element(self.driver, self.submit_alert_xpath)
+
+    def title_of_edit_page(self):
+        time.sleep(2)
+        self.find_element(self.driver, self.header_edit_xpath)
+
+
 
 
 
