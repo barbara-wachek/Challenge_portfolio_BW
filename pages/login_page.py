@@ -1,5 +1,6 @@
 from pages.base_page import BasePage
-
+from selenium.webdriver.common.by import By
+from selenium.webdriver.remote.webdriver import WebDriver
 
 class LoginPage(BasePage):
     login_field_xpath = "//*[@id='login']"
@@ -11,6 +12,7 @@ class LoginPage(BasePage):
     english_language_option_xpath = "//*[@data-value='en']"
     header_xpath = "//h5[contains(@class, 'h5')]"
     expected_title = "Scouts panel - zaloguj"
+    expected_header = "Scouts Panel"
     login_url = "https://scouts-test.futbolkolektyw.pl/pl/"
 
 
@@ -27,4 +29,4 @@ class LoginPage(BasePage):
         assert self.get_page_title(self.login_url) == self.expected_title
 
     def text_of_header(self):
-        self.assert_element_text(self.driver, "//h5[contains(@class, 'h5')]", "Scouts Panel")
+        self.assert_element_text(self.driver, self.header_xpath, self.expected_header)
