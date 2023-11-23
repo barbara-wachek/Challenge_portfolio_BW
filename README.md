@@ -50,5 +50,8 @@ The purpose of this task is to analyze this [web page](https://scouts-test.futbo
 + //*[@data-value="en"]
 + //li[text()="English"]
 
+## Task 3: First automatic test and assertions
+
+
 
 
