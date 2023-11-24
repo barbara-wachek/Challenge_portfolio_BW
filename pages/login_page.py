@@ -26,6 +26,7 @@ class LoginPage(BasePage):
         self.click_on_the_element(self.sign_in_button_xpath)
 
     def title_of_page(self):
+        self.wait_for_element_to_be_clickable(self.header_xpath)
         assert self.get_page_title(self.login_url) == self.expected_title
 
     def text_of_header(self):

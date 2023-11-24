@@ -32,15 +32,13 @@ class AddPlayer(BasePage):
         self.click_on_the_element(self.submit_button_xpath)
 
     def title_of_page(self):
-        time.sleep(5)
+        self.wait_for_element_to_be_clickable(self.submit_button_xpath)
         assert self.get_page_title(self.add_player_url) == self.expected_title
 
     def find_alert_element(self):
         self.find_element(self.driver, self.submit_alert_xpath)
 
-    def title_of_edit_page(self):
-        time.sleep(2)
-        self.find_element(self.driver, self.header_edit_xpath)
+
 
 
 

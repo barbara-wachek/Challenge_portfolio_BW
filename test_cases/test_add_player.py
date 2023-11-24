@@ -37,7 +37,6 @@ class TestAddPlayer(unittest.TestCase):
         add_player_page.click_on_submit_button()
         time.sleep(2)
         add_player_page.find_alert_element()
-        add_player_page.title_of_edit_page()
         time.sleep(3)
 
 

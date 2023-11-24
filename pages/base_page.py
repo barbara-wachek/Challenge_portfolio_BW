@@ -1,5 +1,10 @@
 from selenium.webdriver.common.by import By
 from selenium.webdriver.remote.webdriver import WebDriver
+from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.support.ui import WebDriverWait
+
+from utils.settings import DEFAULT_LOCATOR_TYPE
+import time
 
 
 class BasePage():
@@ -35,3 +40,8 @@ class BasePage():
     def find_element(self, driver, xpath):
         element = driver.find_element(by=By.XPATH, value=xpath)
         assert element is not None
+
+    def wait_for_element_to_be_clickable(self, locator, locator_type=DEFAULT_LOCATOR_TYPE):
+        wait = WebDriverWait(self.driver, 5)
+        element = wait.until(EC.element_to_be_clickable((locator_type, locator)))
+        time.sleep(3)
