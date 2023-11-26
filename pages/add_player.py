@@ -5,6 +5,7 @@ import time
 
 class AddPlayer(BasePage):
     add_player_url = "https://scouts-test.futbolkolektyw.pl/en/players/add"
+    email_field_xpath = "//*[@name='email']"
     name_field_xpath = "//*[@name='name']"
     surname_field_xpath = "//*[@name='surname']"
     age_field_xpath = "//*[@name='age']"
@@ -17,18 +18,52 @@ class AddPlayer(BasePage):
     expected_beginning_title_of_edit_page = "Edit player"
     header_edit_xpath = "//span[contains(text(), 'Edit player')]"
     all_empty_input_fields_xpath = "//input[@value='']"
+    phone_field_xpath = "//*[@name='phone']"
+    weight_field_xpath = "//*[@name='weight']"
+    height_field_xpath = "//*[@name='height']"
+    leg_field_xpath = "//*[@id='mui-component-select-leg']"
+    right_leg_option_xpath = "//*[@id='menu-leg']/div[3]/ul/li[1]"
+    club_field_xpath = "//*[@name='club']"
+    level_field_xpath = "//*[@name='level']"
+    second_position_field_xpath = "//*[@name='level']"
 
+
+    def type_in_email(self, email):
+        self.field_send_keys(self.email_field_xpath, email)
     def type_in_name(self, name):
         self.field_send_keys(self.name_field_xpath, name)
 
     def type_in_surname(self, surname):
         self.field_send_keys(self.surname_field_xpath, surname)
 
+    def type_in_phone_number(self, phone):
+        self.field_send_keys(self.phone_field_xpath, phone)
+
+    def type_in_weight(self, weight):
+        self.field_send_keys(self.weight_field_xpath, weight)
+
+    def type_in_height(self, height):
+        self.field_send_keys(self.height_field_xpath, height)
     def type_in_date_of_birth(self, date):
         self.field_send_keys(self.age_field_xpath, date)
 
     def type_in_main_position(self, main_position):
         self.field_send_keys(self.main_position_field_xpath, main_position)
+
+    def type_in_second_position(self, second_position):
+        self.field_send_keys(self.second_position_field_xpath, second_position)
+
+    def click_on_leg_field(self):
+        self.click_on_the_element(self.leg_field_xpath)
+
+    def click_on_right_leg(self):
+        self.click_on_the_element(self.right_leg_option_xpath)
+
+    def type_in_club(self, club):
+        self.field_send_keys(self.club_field_xpath, club)
+
+    def type_in_level(self, level):
+        self.field_send_keys(self.level_field_xpath, level)
 
     def click_on_submit_button(self):
         self.click_on_the_element(self.submit_button_xpath)
@@ -45,7 +80,7 @@ class AddPlayer(BasePage):
 
     def check_emptiness_input_fields(self):
         list_of_elements = self.find_all_elements_by_xpath(self.driver, self.all_empty_input_fields_xpath)
-        len(list_of_elements) == 17
+
 
 
 

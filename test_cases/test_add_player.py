@@ -102,6 +102,38 @@ class TestAddPlayer(unittest.TestCase):
         add_player_page.find_alert_element()
         time.sleep(3)
 
+    def test_add_player_happy_path(self):
+        user_login = LoginPage(self.driver)
+        user_login.title_of_page()
+        user_login.type_in_email("user01@getnada.com")
+        user_login.type_in_password("Test-1234")
+        user_login.click_on_sign_in_button()
+        time.sleep(3)
+        dashboard_page = Dashboard(self.driver)
+        dashboard_page.click_on_add_player_button()
+        time.sleep(3)
+        add_player_page = AddPlayer(self.driver)
+        add_player_page.title_of_page()
+        add_player_page.type_in_email("test@com.pl")
+        add_player_page.type_in_name("Kacper")
+        add_player_page.type_in_surname("Kowalski")
+        add_player_page.type_in_phone_number("666288000")
+        add_player_page.type_in_weight("70")
+        add_player_page.type_in_date_of_birth("12.03.1970")
+        add_player_page.click_on_leg_field()
+        add_player_page.click_on_right_leg()
+        add_player_page.type_in_club("Real Madryt")
+        add_player_page.type_in_level("XXX")
+        add_player_page.type_in_main_position("napastnik")
+        add_player_page.type_in_second_position("bramkarz")
+
+        add_player_page.click_on_submit_button()
+        time.sleep(2)
+        add_player_page.find_alert_element()
+        time.sleep(3)
+
+
+
     @classmethod
     def tearDown(self):
         self.driver.quit()
