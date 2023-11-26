@@ -45,3 +45,6 @@ class BasePage():
         wait = WebDriverWait(self.driver, 5)
         element = wait.until(EC.element_to_be_clickable((locator_type, locator)))
         time.sleep(3)
+
+    def find_all_elements_by_xpath(self, driver, xpath):
+        driver.find_elements(by=By.XPATH, value=xpath)

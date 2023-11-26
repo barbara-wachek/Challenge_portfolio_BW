@@ -14,6 +14,7 @@ class LoginPage(BasePage):
     expected_title = "Scouts panel - zaloguj"
     expected_header = "Scouts Panel"
     login_url = "https://scouts-test.futbolkolektyw.pl/pl/"
+    incorrect_password_message_xpath = "//*[text()='Identifier or password invalid.']"
 
 
     def type_in_email(self, email):
@@ -31,3 +32,6 @@ class LoginPage(BasePage):
 
     def text_of_header(self):
         self.assert_element_text(self.driver, self.header_xpath, self.expected_header)
+
+    def invalid_password_message(self):
+        self.find_element(self.driver, self.incorrect_password_message_xpath)

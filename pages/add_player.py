@@ -10,11 +10,13 @@ class AddPlayer(BasePage):
     age_field_xpath = "//*[@name='age']"
     main_position_field_xpath = "//*[@name='mainPosition']"
     submit_button_xpath = "//*[@type='submit']"
+    clear_button_xpath = "//span[text()='Clear']/parent::button"
     expected_title = "Add player"
     submit_alert_xpath = "//div[@role='alert']"
     expected_alert_message = "Added player."
     expected_beginning_title_of_edit_page = "Edit player"
     header_edit_xpath = "//span[contains(text(), 'Edit player')]"
+    all_empty_input_fields_xpath = "//input[@value='']"
 
     def type_in_name(self, name):
         self.field_send_keys(self.name_field_xpath, name)
@@ -38,6 +40,12 @@ class AddPlayer(BasePage):
     def find_alert_element(self):
         self.find_element(self.driver, self.submit_alert_xpath)
 
+    def click_on_clear_button(self):
+        self.click_on_the_element(self.clear_button_xpath)
+
+    def check_emptiness_input_fields(self):
+        list_of_elements = self.find_all_elements_by_xpath(self.driver, self.all_empty_input_fields_xpath)
+        len(list_of_elements) == 17
 
 
 
