@@ -48,3 +48,8 @@ class BasePage():
 
     def find_all_elements_by_xpath(self, driver, xpath):
         driver.find_elements(by=By.XPATH, value=xpath)
+
+    def visibility_of_element_located(self, locator, locator_type=DEFAULT_LOCATOR_TYPE):
+        wait = WebDriverWait(self.driver, 5)
+        element = wait.until(EC.visibility_of_element_located((locator_type,locator)))
+        time.sleep(3)

@@ -24,7 +24,9 @@ class TestDashboardPage(unittest.TestCase):
         user_login.click_on_sign_in_button()
         dashboard_page = Dashboard(self.driver)
         dashboard_page.title_of_page()
+        dashboard_page.wait_until_sign_out_button_is_visible()
         dashboard_page.click_on_sign_out_button()
+        user_login.title_of_page()
         time.sleep(5)
 
     @classmethod

@@ -13,11 +13,12 @@ class AddPlayer(BasePage):
     submit_button_xpath = "//*[@type='submit']"
     clear_button_xpath = "//span[text()='Clear']/parent::button"
     expected_title = "Add player"
-    submit_alert_xpath = "//div[@role='alert']"
+    submit_alert_success_xpath = "//div[contains(@class,'toast--success')]"
+    submit_alert_error_xpath = "//div[contains(@class,'toast--error')]"
     expected_alert_message = "Added player."
     expected_beginning_title_of_edit_page = "Edit player"
     header_edit_xpath = "//span[contains(text(), 'Edit player')]"
-    all_empty_input_fields_xpath = "//input[@value='']"
+    all_input_fields_xpath = "//input[@value='']"
     phone_field_xpath = "//*[@name='phone']"
     weight_field_xpath = "//*[@name='weight']"
     height_field_xpath = "//*[@name='height']"
@@ -25,7 +26,10 @@ class AddPlayer(BasePage):
     right_leg_option_xpath = "//*[@id='menu-leg']/div[3]/ul/li[1]"
     club_field_xpath = "//*[@name='club']"
     level_field_xpath = "//*[@name='level']"
-    second_position_field_xpath = "//*[@name='level']"
+    second_position_field_xpath = "//*[@name='secondPosition']"
+    district_field_xpath = "//*[@id='mui-component-select-district']"
+    district_option_greater_poland_xpath = "//*[@id='menu-district']/div[3]/ul/li[15]"
+    achievements_field_xpath = "//*[@name='achievements']"
 
 
     def type_in_email(self, email):
@@ -64,6 +68,13 @@ class AddPlayer(BasePage):
 
     def type_in_level(self, level):
         self.field_send_keys(self.level_field_xpath, level)
+    def click_on_district(self):
+        self.click_on_the_element(self.district_field_xpath)
+    def click_on_district_greater_poland(self):
+        self.click_on_the_element(self.district_option_greater_poland_xpath)
+
+    def type_in_achievements(self, achievements):
+        self.field_send_keys(self.achievements_field_xpath, achievements)
 
     def click_on_submit_button(self):
         self.click_on_the_element(self.submit_button_xpath)
@@ -73,16 +84,17 @@ class AddPlayer(BasePage):
         assert self.get_page_title(self.add_player_url) == self.expected_title
 
     def find_alert_element(self):
-        self.find_element(self.driver, self.submit_alert_xpath)
+        self.find_element(self.driver, self.submit_alert_success_xpath)
 
     def click_on_clear_button(self):
         self.click_on_the_element(self.clear_button_xpath)
 
     def check_emptiness_input_fields(self):
-        list_of_elements = self.find_all_elements_by_xpath(self.driver, self.all_empty_input_fields_xpath)
+        self.find_all_elements_by_xpath(self.driver, self.all_input_fields_xpath)
 
 
-
+    def find_alert_element_not_saved(self):
+        self.find_element(self.driver, self.submit_alert_error_xpath)
 
 
 

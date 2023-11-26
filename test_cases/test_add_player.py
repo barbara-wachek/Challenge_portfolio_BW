@@ -99,7 +99,7 @@ class TestAddPlayer(unittest.TestCase):
         add_player_page.type_in_main_position("napastnik")
         add_player_page.click_on_submit_button()
         time.sleep(2)
-        add_player_page.find_alert_element()
+        add_player_page.find_alert_element_not_saved()
         time.sleep(3)
 
     def test_add_player_happy_path(self):
@@ -126,7 +126,9 @@ class TestAddPlayer(unittest.TestCase):
         add_player_page.type_in_level("XXX")
         add_player_page.type_in_main_position("napastnik")
         add_player_page.type_in_second_position("bramkarz")
-
+        add_player_page.click_on_district()
+        add_player_page.click_on_district_greater_poland()
+        add_player_page.type_in_achievements("Złota Piłka")
         add_player_page.click_on_submit_button()
         time.sleep(2)
         add_player_page.find_alert_element()
