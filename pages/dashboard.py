@@ -17,7 +17,6 @@ class Dashboard(BasePage):
 
     expected_title = "Scouts panel"
     dashboard_url = "https://scouts-test.futbolkolektyw.pl/pl/"
-    pass
 
     def title_of_page(self):
         self.wait_for_element_to_be_clickable(self.dev_team_contact_button_xpath)
@@ -31,3 +30,6 @@ class Dashboard(BasePage):
 
     def wait_until_sign_out_button_is_visible(self):
         self.visibility_of_element_located(self.sign_out_xpath)
+
+    def click_on_players_section(self):
+        self.click_on_the_element(self.players_xpath)

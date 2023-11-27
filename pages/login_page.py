@@ -10,11 +10,13 @@ class LoginPage(BasePage):
     drop_down_list_xpath = "//*[@role='button']"
     polish_language_option_xpath = "//ul/li[1]"
     english_language_option_xpath = "//*[@data-value='en']"
+    select_language_xpath = "//*[@id='__next']/form/div/div[2]/div/div"
     header_xpath = "//h5[contains(@class, 'h5')]"
     expected_title = "Scouts panel - zaloguj"
     expected_header = "Scouts Panel"
     login_url = "https://scouts-test.futbolkolektyw.pl/pl/"
     incorrect_password_message_xpath = "//*[text()='Identifier or password invalid.']"
+    expected_language_english = "English"
 
 
     def type_in_email(self, email):
@@ -35,3 +37,12 @@ class LoginPage(BasePage):
 
     def invalid_password_message(self):
         self.find_element(self.driver, self.incorrect_password_message_xpath)
+
+    def click_on_dropdown_list_of_language(self):
+        self.click_on_the_element(self.drop_down_list_xpath)
+
+    def select_english_language(self):
+        self.click_on_the_element(self.english_language_option_xpath)
+
+    def check_chosen_language_english(self):
+        self.assert_element_text(self.driver, self.select_language_xpath, self.expected_language_english)

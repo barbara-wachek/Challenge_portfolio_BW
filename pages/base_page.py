@@ -2,6 +2,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.remote.webdriver import WebDriver
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.common.keys import Keys
 
 from utils.settings import DEFAULT_LOCATOR_TYPE
 import time
@@ -53,3 +54,11 @@ class BasePage():
         wait = WebDriverWait(self.driver, 5)
         element = wait.until(EC.visibility_of_element_located((locator_type,locator)))
         time.sleep(3)
+
+    def press_enter_on_the_element(self, selector, locator_type=By.XPATH):
+        return self.driver.find_element(locator_type, selector).send_keys(Keys.ENTER)
+
+    def find_text_of_element(self, driver, xpath):
+        element = driver.find_element(by=By.XPATH, value=xpath)
+        element_text = element.text
+        return element_text
