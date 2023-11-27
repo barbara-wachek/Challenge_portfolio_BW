@@ -37,12 +37,22 @@ class TestLoginPage(unittest.TestCase):
 
     def test_select_english(self):
         user_login = LoginPage(self.driver)
+        user_login.select_language("english")
+        user_login.check_chosen_language("english")
+
+    def test_select_polish(self):
+        user_login = LoginPage(self.driver)
+        user_login.select_language("polski")
+        user_login.check_chosen_language("polski")
+
+    def test_change_language(self):
+        user_login = LoginPage(self.driver)
+        user_login.select_language("english")
         time.sleep(2)
-        user_login.click_on_dropdown_list_of_language()
-        user_login.select_english_language()
+        user_login.select_language("polski")
         time.sleep(2)
-        user_login.check_chosen_language_english()
-        time.sleep(2)
+        user_login.check_chosen_language("polski")
+
 
     @classmethod
     def tearDown(self):

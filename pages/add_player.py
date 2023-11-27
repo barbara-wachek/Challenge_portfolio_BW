@@ -90,7 +90,11 @@ class AddPlayer(BasePage):
         self.click_on_the_element(self.clear_button_xpath)
 
     def check_emptiness_input_fields(self):
-        self.find_all_elements_by_xpath(self.driver, self.all_input_fields_xpath)
+        elements = self.find_all_elements_by_xpath(self.driver, self.all_input_fields_xpath)
+        amount_of_input_fields = 17
+
+        assert amount_of_input_fields == len(elements)
+
 
 
     def find_alert_element_not_saved(self):

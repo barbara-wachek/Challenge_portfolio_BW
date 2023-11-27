@@ -1,6 +1,7 @@
 from pages.base_page import BasePage
 from selenium.webdriver.common.by import By
 from selenium.webdriver.remote.webdriver import WebDriver
+import time
 
 class LoginPage(BasePage):
     login_field_xpath = "//*[@id='login']"
@@ -38,11 +39,14 @@ class LoginPage(BasePage):
     def invalid_password_message(self):
         self.find_element(self.driver, self.incorrect_password_message_xpath)
 
-    def click_on_dropdown_list_of_language(self):
+    def check_chosen_language(self, language):
+        self.assert_element_text(self.driver, self.select_language_xpath, language.title())
+
+    def select_language(self, language):
         self.click_on_the_element(self.drop_down_list_xpath)
+        time.sleep(1)
+        if language == "english":
+            self.click_on_the_element(self.english_language_option_xpath)
+        else:
+            self.click_on_the_element(self.polish_language_option_xpath)
 
-    def select_english_language(self):
-        self.click_on_the_element(self.english_language_option_xpath)
-
-    def check_chosen_language_english(self):
-        self.assert_element_text(self.driver, self.select_language_xpath, self.expected_language_english)

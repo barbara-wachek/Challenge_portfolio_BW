@@ -48,7 +48,8 @@ class BasePage():
         time.sleep(3)
 
     def find_all_elements_by_xpath(self, driver, xpath):
-        driver.find_elements(by=By.XPATH, value=xpath)
+        elements = driver.find_elements(by=By.XPATH, value=xpath)
+        return elements
 
     def visibility_of_element_located(self, locator, locator_type=DEFAULT_LOCATOR_TYPE):
         wait = WebDriverWait(self.driver, 5)
@@ -62,3 +63,8 @@ class BasePage():
         element = driver.find_element(by=By.XPATH, value=xpath)
         element_text = element.text
         return element_text
+
+    def check_text_of_element(self, driver, xpath):
+        element = driver.find_element(by=By.XPATH, value=xpath)
+        return element.text
+
