@@ -61,4 +61,3 @@ class BasePage():
     def get_current_url(self, driver):
         get_url = driver.current_url
         return get_url
-
