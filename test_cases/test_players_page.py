@@ -19,7 +19,7 @@ class TestPlayersPage(unittest.TestCase):
         self.driver.fullscreen_window()
         self.driver.implicitly_wait(IMPLICITLY_WAIT)
 
-    #Test do poprawy. Passed a powinno być Failed
+
     def test_search_player_by_surname(self):
         user_login = LoginPage(self.driver)
         user_login.title_of_page()
@@ -33,6 +33,7 @@ class TestPlayersPage(unittest.TestCase):
         players_page = PlayersPage(self.driver)
         players_page.type_in_phrase("Kowalski")
         players_page.press_enter_on_the_search_field()
+        players_page.click_on_next_page_button()
         players_page.check_searching_functionality()
         time.sleep(3)
 

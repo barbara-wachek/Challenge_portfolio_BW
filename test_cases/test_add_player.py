@@ -134,8 +134,6 @@ class TestAddPlayer(unittest.TestCase):
         add_player_page.find_alert_element()
         time.sleep(3)
 
-
-
     @classmethod
     def tearDown(self):
         self.driver.quit()

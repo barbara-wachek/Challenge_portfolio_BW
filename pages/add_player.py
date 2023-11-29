@@ -30,6 +30,7 @@ class AddPlayer(BasePage):
     district_field_xpath = "//*[@id='mui-component-select-district']"
     district_option_greater_poland_xpath = "//*[@id='menu-district']/div[3]/ul/li[15]"
     achievements_field_xpath = "//*[@name='achievements']"
+    amount_of_input_fields = 17
 
 
     def type_in_email(self, email):
@@ -91,11 +92,7 @@ class AddPlayer(BasePage):
 
     def check_emptiness_input_fields(self):
         elements = self.find_all_elements_by_xpath(self.driver, self.all_input_fields_xpath)
-        amount_of_input_fields = 17
-
-        assert amount_of_input_fields == len(elements)
-
-
+        assert self.amount_of_input_fields == len(elements)
 
     def find_alert_element_not_saved(self):
         self.find_element(self.driver, self.submit_alert_error_xpath)

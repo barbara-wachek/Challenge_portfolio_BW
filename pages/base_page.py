@@ -23,20 +23,10 @@ class BasePage():
         self.driver.get(url)
         return self.driver.title
 
-
-    # Extra subtask
     def assert_element_text(self, driver, xpath, expected_text):
-        """Comparing expected text with observed value from web element
-
-            :param driver: webdriver instance
-            :param xpath: xpath to element with text to be observed
-            :param expected_text: text what we expecting to be found
-            :return: None
-        """
         element = driver.find_element(by=By.XPATH, value=xpath)
         element_text = element.text
         assert expected_text == element_text
-
 
     def find_element(self, driver, xpath):
         element = driver.find_element(by=By.XPATH, value=xpath)
@@ -67,4 +57,8 @@ class BasePage():
     def check_text_of_element(self, driver, xpath):
         element = driver.find_element(by=By.XPATH, value=xpath)
         return element.text
+
+    def get_current_url(self, driver):
+        get_url = driver.current_url
+        return get_url
 
