@@ -1,6 +1,4 @@
 from pages.base_page import BasePage
-import time
-
 
 
 class AddPlayer(BasePage):
@@ -96,6 +94,10 @@ class AddPlayer(BasePage):
 
     def find_alert_element_not_saved(self):
         self.find_element(self.driver, self.submit_alert_error_xpath)
+
+    def wait_until_submit_button_is_visible(self):
+        self.visibility_of_element_located(self.submit_button_xpath)
+
 
 
 

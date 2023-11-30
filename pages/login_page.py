@@ -50,3 +50,6 @@ class LoginPage(BasePage):
         else:
             self.click_on_the_element(self.polish_language_option_xpath)
 
+    def wait_until_sign_in_button_is_visible(self):
+        self.visibility_of_element_located(self.sign_in_button_xpath)
+
