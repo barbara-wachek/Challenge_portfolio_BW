@@ -51,7 +51,8 @@ The purpose of this task is to analyze this [web page](https://scouts-test.futbo
 + //li[text()="English"]
 
 ## Task 3: First automatic test and assertions
-
+## Task 4: Refactor, debugger and test cases
+#### [Test Cases (Google Drive Files)](https://drive.google.com/drive/folders/1lQEnFcOP7LvCqcQRDxyhBLe6o-JqOaJ3)
 
 
 
