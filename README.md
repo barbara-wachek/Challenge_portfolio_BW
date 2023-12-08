@@ -1,19 +1,27 @@
 ## Table of Contents 
 * [Introduction](#introduction)
-* [Task 1](#task-1-software-configuration)
-* [Task 2](#task-2-selectors)
-* [Task 3](#task-3-first-automatic-test-and-assertions)
-* [Task 4](#task-4-refactor-debugger-and-test-cases)
-* [Task 5](#task-5-robot-framework)
+* [Task 1: Software configuration](#task-1-software-configuration)
+* [Task 2: Selectors](#task-2-selectors)
+* [Task 3: First automatic test and assertions](#task-3-first-automatic-test-and-assertions)
+* [Task 4: Refactor, debugger and test cases](#task-4-refactor-debugger-and-test-cases)
+* [Task 5: Robot Framework](#task-5-robot-framework)
+* [Task 6: Bug reporting and test report](#task-6-bug-reporting-and-test-report)
 
 ## Introduction
-This repository contains an automated testing environment for the [Scouts Panel website](https://scouts-test.futbolkolektyw.pl/login). This project was carried out as part of the Dare IT Challenge.
+This repository contains an automated testing environment for the [Scouts Panel website](https://scouts-test.futbolkolektyw.pl/login). This project was carried out as part of the [Dare IT Challenge](https://www.dareit.io/challenges/wstep-do-testow-automatycznych).
 
 Other outputs of Challenge:
 * [Manual test cases](https://docs.google.com/spreadsheets/d/1RCin82tfSesU4tCNpFl7ppMIG3XLe50hg9Kswb1hSpE/edit#gid=0) 
 * [Automated tests in Robot Framework](https://github.com/barbara-wachek/panelscout_robotframework) 
 
 ## Task 1: Software configuration
+Task goals: 
+* perform exploratory tests of the application,
+* find out what programs are necessary to start automatic testing,
+* set up a remote repository on GitHub,
+* clone the repository and configure the work environment,
+* format the README file.
+
 #### Subtask 1: Why I decided to take part in the [Dare IT Challenge](https://www.dareit.io/challenges/wstep-do-testow-automatycznych)?"
 ###### I decided to take part in the challenge to learn the basics of automated testing using Python and to create my own portfolio.
 #### Subtask 4: 
@@ -70,4 +78,5 @@ The purpose of this task is to analyze this [web page](https://scouts-test.futbo
 #### Test cases and test videos: https://drive.google.com/drive/folders/1lQEnFcOP7LvCqcQRDxyhBLe6o-JqOaJ3
 ## Task 5: Robot Framework
 [Github repository](https://github.com/barbara-wachek/panelscout_robotframework)
+## Task 6: Bug reporting and test report
 
