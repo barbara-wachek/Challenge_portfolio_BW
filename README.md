@@ -8,9 +8,9 @@
 * [Task 6: Bug reporting and test report](#task-6-bug-reporting-and-test-report)
 
 ## Introduction
-This repository contains an automated testing environment for the [Scouts Panel website](https://scouts-test.futbolkolektyw.pl/login). This project was carried out as part of the [Dare IT Challenge](https://www.dareit.io/challenges/wstep-do-testow-automatycznych).
+This repository contains the automated testing framework for the [Scouts Panel website](https://scouts-test.futbolkolektyw.pl/login). This project was carried out as part of the [Dare IT Challenge](https://www.dareit.io/challenges/wstep-do-testow-automatycznych).
 
-Other outputs of Challenge:
+Other outputs:
 * [Manual test cases](https://docs.google.com/spreadsheets/d/1RCin82tfSesU4tCNpFl7ppMIG3XLe50hg9Kswb1hSpE/edit#gid=0) 
 * [Automated tests in Robot Framework](https://github.com/barbara-wachek/panelscout_robotframework) 
 
