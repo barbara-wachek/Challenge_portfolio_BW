@@ -14,13 +14,17 @@ Other outputs of Challenge:
 * [Manual test cases](https://docs.google.com/spreadsheets/d/1RCin82tfSesU4tCNpFl7ppMIG3XLe50hg9Kswb1hSpE/edit#gid=0) 
 * [Automated tests in Robot Framework](https://github.com/barbara-wachek/panelscout_robotframework) 
 
+My certificate:
+
 ## Task 1: Software configuration
-Task goals: 
-* perform exploratory tests of the application,
-* find out what programs are necessary to start automatic testing,
-* set up a remote repository on GitHub,
-* clone the repository and configure the work environment,
-* format the README file.
+
+Goals:   
+
+✅ perform exploratory tests of the application,  
+✅ find out what programs are necessary to start automatic testing,  
+✅ set up a remote repository on GitHub,  
+✅ clone the repository and configure the work environment,  
+✅ format the README file.  
 
 #### Subtask 1: Why I decided to take part in the [Dare IT Challenge](https://www.dareit.io/challenges/wstep-do-testow-automatycznych)?"
 ###### I decided to take part in the challenge to learn the basics of automated testing using Python and to create my own portfolio.
@@ -28,8 +32,16 @@ Task goals:
 ###### The result of the first attempt at the test [GET ISTQB (Purpurowy)](https://getistqb.com/#quizzes): 10/14
 
 ## Task 2: Selectors
+
+Goals: 
+
+✅ learn what selectors are,  
+✅ find out where to look for selectors,  
+✅ learn the xPath record,  
+✅ understand what to follow to identify the “best” selectors.
+
 #### Subtask 2:
-The purpose of this task is to analyze this [web page](https://scouts-test.futbolkolektyw.pl/en/login?redirected=true) elements to create effective selectors.
+The purpose of this subtask is to analyze this [web page](https://scouts-test.futbolkolektyw.pl/en/login?redirected=true) elements to create effective selectors.
 
 **scouts_panel_text_xpath**
 + //h5
@@ -74,9 +86,45 @@ The purpose of this task is to analyze this [web page](https://scouts-test.futbo
 + //li[text()="English"]
 
 ## Task 3: First automatic test and assertions
+
+Goals:  
+
+✅ get to know in detail the framework,  
+✅ click on elements on the page,  
+✅ fill in the fields with text,  
+✅ use assert title,  
+✅ run the test.  
+
 ## Task 4: Refactor, debugger and test cases
-#### Test cases and test videos: https://drive.google.com/drive/folders/1lQEnFcOP7LvCqcQRDxyhBLe6o-JqOaJ3
+
+Goals: 
+
+✅ refactor the code,  
+✅ learn how to work with the debugger,  
+✅ design and write test cases,  
+✅ automate the website based on your TCs.  
+
+Test cases and test videos:   
+https://drive.google.com/drive/folders/1lQEnFcOP7LvCqcQRDxyhBLe6o-JqOaJ3
+
+
 ## Task 5: Robot Framework
-[Github repository](https://github.com/barbara-wachek/panelscout_robotframework)
+
+Goals:  
+
+✅ find out what Smoke Tests are,  
+✅ learn how to configure Suite Test,  
+✅ get to know the new framework,  
+✅ generate a report automatically.  
+
+My repository: https://github.com/barbara-wachek/panelscout_robotframework
+
 ## Task 6: Bug reporting and test report
+
+Goals:  
+
+✅ use projects for reporting bugs,  
+✅ get to know the structure of a properly reported bug,  
+✅ familiarize yourself with the structure of test reports,  
+✅ create a repository with a functional portfolio in the README file.  
 
