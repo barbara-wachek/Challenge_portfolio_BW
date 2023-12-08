@@ -14,6 +14,8 @@ class Dashboard(BasePage):
     last_updated_report_button_xpath = "//*[@id='__next']/div[1]/main/div[3]/div[3]/div/div/a[5]/button"
     expected_title = "Scouts panel"
     dashboard_url = "https://scouts-test.futbolkolektyw.pl/pl/"
+    last_created_player_text_xpath = "//div[3]/div/div/a[1]/button/span[1]"
+
 
     def title_of_page(self):
         self.wait_for_element_to_be_clickable(self.dev_team_contact_button_xpath)
@@ -30,3 +32,9 @@ class Dashboard(BasePage):
 
     def click_on_players_section(self):
         self.click_on_the_element(self.players_xpath)
+
+    def check_last_created_player(self, player):
+        last_created_player = self.check_text_of_element(self.driver, self.last_created_player_text_xpath)
+        assert last_created_player != player
+
+

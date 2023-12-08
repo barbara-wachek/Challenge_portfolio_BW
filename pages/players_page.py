@@ -10,6 +10,7 @@ class PlayersPage(BasePage):
     search_first_page_kowalski_url = 'https://scouts-test.futbolkolektyw.pl/players?start=1&query=Kowalski'
     search_second_page_kowalski_url = 'https://scouts-test.futbolkolektyw.pl/players?start=2&query=Kowalski'
 
+
     def type_in_phrase(self, phrase):
         self.field_send_keys(self.search_field_xpath, phrase)
 

@@ -1,7 +1,10 @@
+from selenium.webdriver.common.by import By
+
 from pages.base_page import BasePage
 
 
 class AddPlayer(BasePage):
+    main_page_xpath = "//*[text()='Strona główna' or text()='Main page']"
     add_player_url = "https://scouts-test.futbolkolektyw.pl/en/players/add"
     email_field_xpath = "//*[@name='email']"
     name_field_xpath = "//*[@name='name']"
@@ -29,6 +32,8 @@ class AddPlayer(BasePage):
     district_option_greater_poland_xpath = "//*[@id='menu-district']/div[3]/ul/li[15]"
     achievements_field_xpath = "//*[@name='achievements']"
     amount_of_input_fields = 17
+    players_button_xpath = "//*[text()='Gracze' or text()='Players']"
+    new_player_section_xpath = "//ul[2]/div[1]/div[2]/span"
 
 
     def type_in_email(self, email):
@@ -98,8 +103,11 @@ class AddPlayer(BasePage):
     def wait_until_submit_button_is_visible(self):
         self.visibility_of_element_located(self.submit_button_xpath)
 
+    def click_on_main_page(self):
+        self.click_on_the_element(self.main_page_xpath)
 
-
+    def check_if_player_is_added(self, player):
+        self.assert_element_text(self.driver, self.new_player_section_xpath, player)
 
 
 
