@@ -1,16 +1,17 @@
-This repository contains an automated testing environment for the [Scouts Panel website](https://scouts-test.futbolkolektyw.pl/login). This project was carried out as part of the Dare IT Challenge.
-
-Other outputs of Challenge:
-* [manual test cases](https://docs.google.com/spreadsheets/d/1RCin82tfSesU4tCNpFl7ppMIG3XLe50hg9Kswb1hSpE/edit#gid=0) 
-* [automated tests in Robot Framework](https://github.com/barbara-wachek/panelscout_robotframework) 
-
 ## Table of Contents 
+* [Introduction](#introduction)
 * [Task 1](#task-1-software-configuration)
 * [Task 2](#task-2-selectors)
 * [Task 3](#task-3-first-automatic-test-and-assertions)
 * [Task 4](#task-4-refactor-debugger-and-test-cases)
 * [Task 5](#task-5-robot-framework)
 
+## Introduction
+This repository contains an automated testing environment for the [Scouts Panel website](https://scouts-test.futbolkolektyw.pl/login). This project was carried out as part of the Dare IT Challenge.
+
+Other outputs of Challenge:
+* [Manual test cases](https://docs.google.com/spreadsheets/d/1RCin82tfSesU4tCNpFl7ppMIG3XLe50hg9Kswb1hSpE/edit#gid=0) 
+* [Automated tests in Robot Framework](https://github.com/barbara-wachek/panelscout_robotframework) 
 
 ## Task 1: Software configuration
 #### Subtask 1: Why I decided to take part in the [Dare IT Challenge](https://www.dareit.io/challenges/wstep-do-testow-automatycznych)?"
