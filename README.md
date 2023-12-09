@@ -128,3 +128,8 @@ Goals:
 ✅ familiarize yourself with the structure of test reports,  
 ✅ create a repository with a functional portfolio in the README file.  
 
+#### Subtask 2: Reporting bugs
+My bugs reports: https://docs.google.com/spreadsheets/d/1enhzrU5YLdNfEAqFgr-tsox6qzL-8sXCVjplE-7jSl8/edit#gid=0
+
+#### Subtask 3: Test report
+My test report: https://docs.google.com/spreadsheets/d/1Eyb_ckjjs_AAFPdaLF8Rm2m22IVeAeBBC70YcwemM-8/edit?usp=sharing
